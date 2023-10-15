@@ -1,5 +1,5 @@
 [package]
-name = "load_csv_with_schema"
+name = "inner_join_and_filter"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,6 +7,12 @@ edition = "2021"
 schemata = { path = "../schemata" }
 
 [dependencies.anyhow]
+workspace = true
+
+[dependencies.chrono]
+workspace = true
+
+[dependencies.chrono-tz]
 workspace = true
 
 [dependencies.polars]
