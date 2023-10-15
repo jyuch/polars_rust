@@ -1,0 +1,9 @@
+[workspace]
+resolver = "2"
+members = [
+    "load_csv"
+]
+
+[workspace.dependencies]
+anyhow = "1"
+polars = "0.33.2"
