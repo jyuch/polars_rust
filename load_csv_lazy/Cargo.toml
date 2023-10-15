@@ -1,0 +1,11 @@
+[package]
+name = "load_csv_lazy"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow.workspace = true
+
+[dependencies.polars]
+workspace = true
+features = ["csv", "lazy"]

@@ -537,6 +537,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "load_csv_lazy"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "polars",
+]
+
+[[package]]
 name = "load_csv_with_schema"
 version = "0.1.0"
 dependencies = [

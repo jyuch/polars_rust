@@ -3,6 +3,7 @@ resolver = "2"
 members = [
     "load_csv",
     "load_csv_with_schema",
+    "load_csv_lazy",
 ]
 
 [workspace.dependencies]
