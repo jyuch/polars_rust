@@ -1,7 +1,8 @@
 [workspace]
 resolver = "2"
 members = [
-    "load_csv"
+    "load_csv",
+    "load_csv_with_schema",
 ]
 
 [workspace.dependencies]
