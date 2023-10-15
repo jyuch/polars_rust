@@ -2,17 +2,22 @@ use polars::prelude::*;
 
 fn main() -> anyhow::Result<()> {
     let schema = Schema::from_iter(vec![
-        Field::new("col1", DataType::Utf8),
-        Field::new("col2", DataType::Int64),
-        Field::new("col3", DataType::Utf8),
+        Field::new("qoid", DataType::Utf8),
+        Field::new("ver", DataType::UInt32),
+        Field::new("name", DataType::Utf8),
+        Field::new("unit_qty", DataType::Float64),
+        Field::new("is_purchase", DataType::Boolean),
         Field::new(
-            "col4",
+            "valid_start",
             DataType::Datetime(TimeUnit::Milliseconds, Some("Asia/Tokyo".into())),
         ),
-        Field::new("col5", DataType::Float64),
+        Field::new(
+            "valid_end",
+            DataType::Datetime(TimeUnit::Milliseconds, Some("Asia/Tokyo".into())),
+        ),
     ]);
 
-    let df = CsvReader::from_path("data/load_csv_with_schema.csv")?
+    let df = CsvReader::from_path("data/part.csv")?
         .has_header(true)
         .with_schema(Some(Arc::new(schema)))
         .finish()?;

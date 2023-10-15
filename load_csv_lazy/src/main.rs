@@ -1,7 +1,7 @@
 use polars::prelude::*;
 
 fn main() -> anyhow::Result<()> {
-    let df = LazyCsvReader::new("data/load_csv_lazy.csv")
+    let df = LazyCsvReader::new("data/single_integer.csv")
         .finish()?
         .select([col("value").sum()])
         .collect()?;
